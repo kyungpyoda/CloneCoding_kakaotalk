@@ -1,0 +1,50 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.container {
+    display: grid;
+    width: 520px;
+    margin: 100px auto 0 auto;
+    height: 600px;
+    grid-template-columns: 70px 1fr;
+}
+.menu {
+    background: #eee;
+}
+.temp {
+    display: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+li {
+    text-align: center;
+}
+.fas.fa-user {
+    margin-top: 50px;
+}
+.fas.fa-comment, .fas.fa-ellipsis-h {
+    margin-top: 40px;
+}
+.far.fa-smile {
+    margin-top: 200px;
+}
+.far.fa-calendar-check, .far.fa-bell-slash, .fas.fa-bars {
+    margin-top: 40px;
+}
+
+li a:visited {
+    color: black;
+}
+
+@media(max-width: 500px) {
+    .container {
+        display: none;
+    }
+    .temp {
+        display: block;
+    }
+}
