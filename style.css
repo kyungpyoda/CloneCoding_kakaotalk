@@ -8,36 +8,95 @@ html, body {
     margin: 100px auto 0 auto;
     height: 600px;
     grid-template-columns: 70px 1fr;
+    grid-template-rows: 600px;
+    border: 1px solid gray;
 }
-.menu {
+.container .menu {
     background: #eee;
 }
+.main {
+   display: grid;
+   grid-template-rows: 32px 120px 1fr;
+    
+}
+.minmaxesc {
+    height: 22px;
+    text-align: right;
+    margin: 5px;
+}
+.w_minimize, .w_maximize, .w_close {
+    margin: 0 5px;
+}
+.header {
+    padding: 10px 20px;
+}
+.header .title {
+    height: 60px;
+    line-height: 60px;
+}
+.header .title .t_openchat, .header .title .t_newchat {
+    float: right;
+}
+.header .title .t_openchat {
+    margin-right: 15px;
+}
+.header .search {
+    height: 40px;
+    line-height: 40px;
+    background: #eee;
+    border-radius: 30px;
+    padding: 0 15px;
+}
+.header .search input {
+    margin-left: 10px;
+    width: 340px;
+    height: 25px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    vertical-align: middle;
+}
+.header .search input:focus {
+    outline: none;
+}
+.items {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.items li {
+    height: 80px;
+    border: 1px solid gray;
+}
+
 .temp {
     display: none;
 }
+
 ul {
     padding: 0;
     margin: 0;
     list-style: none;
 }
-li {
+.menu li {
     text-align: center;
 }
-.fas.fa-user {
+
+.menu .m_friends {
     margin-top: 50px;
 }
-.fas.fa-comment, .fas.fa-ellipsis-h {
+.menu .m_chat, .m_more {
     margin-top: 40px;
 }
-.far.fa-smile {
+.menu .m_emoji {
     margin-top: 200px;
 }
-.far.fa-calendar-check, .far.fa-bell-slash, .fas.fa-bars {
+.menu .m_calendar, .m_notifi, .m_menu {
     margin-top: 40px;
 }
 
-li a:visited {
+a:visited {
     color: black;
+    
 }
 
 @media(max-width: 500px) {
