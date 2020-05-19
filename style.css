@@ -63,7 +63,7 @@ html, body {
     overflow-x: hidden;
     overflow-y: auto;
 }
-.items li {
+.items input {
     height: 80px;
     border: 1px solid gray;
 }
