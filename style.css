@@ -60,12 +60,53 @@ html, body {
     outline: none;
 }
 .items {
+    padding: 0 0 0 20px;
     overflow-x: hidden;
     overflow-y: auto;
 }
-.items input {
-    height: 80px;
-    border: 1px solid gray;
+.items li {
+    display: grid;
+    grid-template-columns: 80px 260px 1fr;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+        "g_img g_text1 g_text3"
+        "g_img g_text2 g_text4";
+    height: 60px;
+    width: 100%;
+    padding: 10px 0;
+    border: 1px none gray;
+    line-height: 30px;
+
+}
+.items li:hover {
+    background: #eee;
+}
+.items li img {
+    grid-area: g_img;
+    width: 60px;
+    height: 60px;
+    border-radius: 23px;
+}
+.items li p {
+    margin: 0;   
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.items li #g_text1 {
+    grid-area: g_text1;
+    font-weight: bold;
+}
+.items li #g_text2 {
+    grid-area: g_text2;
+
+}
+.items li #g_text3 {
+    grid-area: g_text3;
+    font-size: 11px;
+}
+
+.chatting {
+    display: none;
 }
 
 .temp {
@@ -96,7 +137,6 @@ ul {
 
 a:visited {
     color: black;
-    
 }
 
 @media(max-width: 500px) {
