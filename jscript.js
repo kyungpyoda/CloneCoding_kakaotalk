@@ -1,8 +1,8 @@
 function getChatList() {
     //var profile = new image(60, 60);
     //profile.src = 'jerry_square.jpg';
-
-    document.write('<li ondblclick="chatOpen()">');
+    var name = 'Fanna';
+    document.write('<li ondblclick="chatOpen(\''+name+'\')">');
     document.write('<img src="jerry_square.jpg" alt="">')
     document.write('<p id="g_text1">Fanna</p><p id="g_text2">Hello</p><p id="g_text3">오후 12:58</p>');
     //<span class="fa-stack">
@@ -23,9 +23,10 @@ function getChatList() {
 
 }
 function chatOpen(name) {
-    document.querySelector('.header').style.display = 'none';
-    document.querySelector('.items').style.display = 'none';
-    document.querySelector('.chatting').style.display = 'block';
-    document.querySelector('.main').style.gridTemplateRows = '32px 1fr';
-
+    //document.querySelector('.header').style.display = 'none';
+    //document.querySelector('.items').style.display = 'none';
+    //document.querySelector('.chatting').style.display = 'block';
+    //document.querySelector('.main').style.gridTemplateRows = '32px 1fr';
+    window.location.href = 'chatting.html';
+    //alert(name);
 }
