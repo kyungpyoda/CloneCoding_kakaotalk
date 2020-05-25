@@ -1,3 +1,4 @@
+var cname;
 function getChatList() {
     //var profile = new image(60, 60);
     //profile.src = 'jerry_square.jpg';
@@ -27,6 +28,27 @@ function chatOpen(name) {
     //document.querySelector('.items').style.display = 'none';
     //document.querySelector('.chatting').style.display = 'block';
     //document.querySelector('.main').style.gridTemplateRows = '32px 1fr';
+    sessionStorage.setItem('chatter', name);
     window.location.href = 'chatting.html';
-    //alert(name);
+    
+}
+function chatLoad() {
+    var rawfile = new XMLHttpRequest();
+    rawfile.open("GET", "http://127.0.0.1/fanna.txt", false);
+    rawfile.onreadystatechange = function() {
+        if (rawfile.readyState === 4) {
+            if (rawfile.readyState === 200 || rawfile.status === 0) {
+                var allText = rawfile.responseText;
+                alert(allText);
+                document.getElementById("output").innerHTML = allText;
+            }
+            else {
+                //alert("!!");
+            }
+        }
+        else {
+            //alert("!");
+        }
+    };
+    rawfile.send(null);
 }
