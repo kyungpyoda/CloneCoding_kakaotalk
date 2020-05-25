@@ -34,7 +34,7 @@ function chatOpen(name) {
 }
 function chatLoad() {
     var rawfile = new XMLHttpRequest();
-    rawfile.open("GET", "http://127.0.0.1/fanna.txt", false);
+    rawfile.open("GET", "https://kyungpyoda.github.io/CloneCoding_kakaotalk/fanna.txt", false);
     rawfile.onreadystatechange = function() {
         if (rawfile.readyState === 4) {
             if (rawfile.readyState === 200 || rawfile.status === 0) {
