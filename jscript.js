@@ -37,17 +37,11 @@ function chatLoad() {
     rawfile.open("GET", "https://kyungpyoda.github.io/CloneCoding_kakaotalk/fanna.txt", false);
     rawfile.onreadystatechange = function() {
         if (rawfile.readyState === 4) {
-            if (rawfile.readyState === 200 || rawfile.status === 0) {
+            if (rawfile.status === 200 || rawfile.status === 0) {
                 var allText = rawfile.responseText;
                 alert(allText);
                 document.getElementById("output").innerHTML = allText;
             }
-            else {
-                //alert("!!");
-            }
-        }
-        else {
-            //alert("!");
         }
     };
     rawfile.send(null);
