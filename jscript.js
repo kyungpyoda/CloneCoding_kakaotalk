@@ -39,8 +39,12 @@ function chatLoad() {
         if (rawfile.readyState === 4) {
             if (rawfile.status === 200 || rawfile.status === 0) {
                 var allText = rawfile.responseText;
-                alert(allText);
-                document.getElementById("output").innerHTML = allText;
+                //alert(allText);
+                var lines = allText.split("\n");
+                //document.getElementById("output").innerHTML = allText;
+                for(a in lines) {
+                    document.write("<p>"+a+"</p>");
+                }
             }
         }
     };

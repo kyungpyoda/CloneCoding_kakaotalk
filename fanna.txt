@@ -1,1 +1,4 @@
-texttext
+Fanna
+"https://kyungpyoda.github.io/CloneCoding_kakaotalk/jerry_square.jpg"
+
+asdf
