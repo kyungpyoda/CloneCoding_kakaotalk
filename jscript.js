@@ -30,7 +30,6 @@ function chatOpen() {
     //document.querySelector('.main').style.gridTemplateRows = '32px 1fr';
     //localStorage.setItem('chatter', name);
     window.location.href = 'chatting.html';
-    
 }
 function chatLoad() {
     var rawfile = new XMLHttpRequest();
@@ -40,8 +39,9 @@ function chatLoad() {
             if (rawfile.status === 200 || rawfile.status === 0) {
                 var allText = rawfile.responseText;
                 var lines = allText.split("\n");
-                localStorage.setItem('chatter', '{"chatter_name":'+lines[0]+',"chatter_img":'+lines[1]+'}');
-                //localStorage.setItem('chatter_img', lines[1]);
+                //alert(lines[1]);
+                localStorage.setItem('chatter', '{"chatter_name":"'+lines[0]+'","chatter_img":"'+lines[1]+'"}');
+                
                 lines.splice(0, 2);
                 for(var line of lines) {
                     document.write("<p>"+line+"</p>");

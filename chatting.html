@@ -5,6 +5,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="jscript.js"></script>
+    <style>
+        .main {
+            grid-template-rows: 32px 30px 1fr;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -27,17 +32,22 @@
         </div>
 
         <div class="chatting">
-            <a href="index.html"><i class="fas fa-chevron-left"></i></a>
+            <div class="chatHeader">
+                <a href="index.html"><i class="fas fa-chevron-left fa-lg"></i></a>
+                <span id="chatChatter">temp</span>
+            </div>
             <div id="output">
                 <script> 
-                    var json = localStorage.getItem('chatter');
-                    alert(json);
-                    var temp = JSON.parse(json);
-                    //alert(temp.chatter_name);
-                    chatLoad(); </script>
+                    chatLoad();
+                    var temp = JSON.parse(localStorage.getItem('chatter'));
+                    document.getElementById('chatChatter').innerText = temp.chatter_name;
+                </script>
                 <div>
-
+                    
                 </div>
+            </div>
+            <div id="chatinput">
+                <input type="text">
             </div>
         </div>
     </div>

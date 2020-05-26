@@ -108,6 +108,18 @@ html, body {
 .chatting {
     width: 450px;
 }
+.chatting .chatHeader {
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;
+}
+.chatting .chatHeader #chatChatter {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    font-weight: bold;
+    font-size: 20px;
+}
 
 .temp {
     display: none;
