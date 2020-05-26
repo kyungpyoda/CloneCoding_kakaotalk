@@ -1,5 +1,5 @@
 1Fanna
-'https://kyungpyoda.github.io/CloneCoding_kakaotalk/jerry_square.jpg'
+https://kyungpyoda.github.io/CloneCoding_kakaotalk/jerry_square.jpg
 3
 4asdf
 5

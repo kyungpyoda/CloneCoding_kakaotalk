@@ -40,8 +40,8 @@ function chatLoad() {
             if (rawfile.status === 200 || rawfile.status === 0) {
                 var allText = rawfile.responseText;
                 var lines = allText.split("\n");
-                localStorage.setItem('chatter_name', lines[0]);
-                localStorage.setItem('chatter_img', lines[1]);
+                localStorage.setItem('chatter', '{"chatter_name":'+lines[0]+',"chatter_img":'+lines[1]+'}');
+                //localStorage.setItem('chatter_img', lines[1]);
                 lines.splice(0, 2);
                 for(var line of lines) {
                     document.write("<p>"+line+"</p>");
