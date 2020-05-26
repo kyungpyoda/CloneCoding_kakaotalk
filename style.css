@@ -7,7 +7,7 @@ html, body {
     width: 520px;
     margin: 100px auto 0 auto;
     height: 600px;
-    grid-template-columns: 70px 1fr;
+    grid-template-columns: 70px 450px;
     grid-template-rows: 600px;
     border: 1px solid gray;
 }
@@ -15,14 +15,15 @@ html, body {
     background: #eee;
 }
 .main {
-   display: grid;
-   grid-template-rows: 32px 120px 1fr;
-    
+    display: grid;
+    grid-template-rows: 32px 120px 1fr;
+    max-width: 450px;
 }
 .minmaxesc {
     height: 22px;
     text-align: right;
     margin: 5px;
+    width: 440px;
 }
 .w_minimize, .w_maximize, .w_close {
     margin: 0 5px;
@@ -104,7 +105,9 @@ html, body {
     grid-area: g_text3;
     font-size: 11px;
 }
-
+.chatting {
+    width: 450px;
+}
 
 .temp {
     display: none;

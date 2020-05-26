@@ -23,12 +23,12 @@ function getChatList() {
     document.write('</li>');
 
 }
-function chatOpen(name) {
+function chatOpen() {
     //document.querySelector('.header').style.display = 'none';
     //document.querySelector('.items').style.display = 'none';
     //document.querySelector('.chatting').style.display = 'block';
     //document.querySelector('.main').style.gridTemplateRows = '32px 1fr';
-    sessionStorage.setItem('chatter', name);
+    //localStorage.setItem('chatter', name);
     window.location.href = 'chatting.html';
     
 }
@@ -39,11 +39,12 @@ function chatLoad() {
         if (rawfile.readyState === 4) {
             if (rawfile.status === 200 || rawfile.status === 0) {
                 var allText = rawfile.responseText;
-                //alert(allText);
                 var lines = allText.split("\n");
-                //document.getElementById("output").innerHTML = allText;
-                for(a in lines) {
-                    document.write("<p>"+a+"</p>");
+                localStorage.setItem('chatter_name', lines[0]);
+                localStorage.setItem('chatter_img', lines[1]);
+                lines.splice(0, 2);
+                for(var line of lines) {
+                    document.write("<p>"+line+"</p>");
                 }
             }
         }

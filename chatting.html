@@ -30,11 +30,13 @@
             <i class="fas fa-chevron-left"></i>
             <div id="output">
                 <script>
-                    let data = sessionStorage.getItem('chatter');
-                    //document.write(data);
                     chatLoad();
+                    let cn = localStorage.getItem('chatter_name');
+                    let ci = localStorage.getItem('chatter_img');
 
                 </script>
+                <img id="ci" src="">
+                    <script> document.getElementById("ci").src = localStorage.getItem('chatter_img'); </script>
             </div>
         </div>
     </div>
