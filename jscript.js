@@ -45,10 +45,10 @@ function chatLoad() {
                 lines.splice(0, 2);
                 for(var line of lines) {
                     var temp = JSON.parse(line);
-                    alert(temp.who);
-                    document.write('<div class='+temp.who+'>'+line+'</div>');
-                    //document.write(line+"\n");
+                    document.write('<div class='+temp.who+'>'+temp.content+'</div>');
                 }
+                var elem = document.querySelector('.output');
+                elem.scrollTop = elem.scrollHeight;
             }
         }
     };
