@@ -41,11 +41,18 @@ function chatLoad() {
                 var lines = allText.split("\n");
                 //alert(lines[1]);
                 localStorage.setItem('chatter', '{"chatter_name":"'+lines[0]+'","chatter_img":"'+lines[1]+'"}');
+                var temp = JSON.parse(localStorage.getItem('chatter'));
+                document.getElementById('chatChatter').innerText = temp.chatter_name;
                 
                 lines.splice(0, 2);
                 for(var line of lines) {
                     var temp = JSON.parse(line);
-                    document.write('<div class='+temp.who+'>'+temp.content+'</div>');
+                    if(temp.who === 'system') {
+                        alert(line);
+                        continue;
+                    }
+                    var tt = temp.who+' '+temp.time;
+                    document.write('<div class="'+tt+'">'+temp.content+'</div>');
                 }
                 var elem = document.querySelector('.output');
                 elem.scrollTop = elem.scrollHeight;

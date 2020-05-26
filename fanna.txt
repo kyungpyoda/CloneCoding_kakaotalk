@@ -1,5 +1,6 @@
 Fanna
 https://kyungpyoda.github.io/CloneCoding_kakaotalk/jerry_square.jpg
+{"who" : "system", "year" : 2020, "month" : 5, "date" : 25, "day" : 1}
 {"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
 {"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
 {"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
@@ -11,6 +12,7 @@ https://kyungpyoda.github.io/CloneCoding_kakaotalk/jerry_square.jpg
 {"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
 {"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
 {"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
+{"who" : "system", "year" : 2020, "month" : 5, "date" : 26, "day" : 2}
 {"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
 {"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
 {"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
@@ -21,5 +23,5 @@ https://kyungpyoda.github.io/CloneCoding_kakaotalk/jerry_square.jpg
 {"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
 {"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
 {"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
-{"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
-{"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
+{"who" : "opponent", "time" : "PM 5:01", "content" : "hello1"}
+{"who" : "opponent", "time" : "PM 5:01", "content" : "hello1"}
