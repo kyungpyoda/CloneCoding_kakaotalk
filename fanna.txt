@@ -1,5 +1,5 @@
 Fanna
 https://kyungpyoda.github.io/CloneCoding_kakaotalk/jerry_square.jpg
-{"who" : "opponent", "time", "PM 5:00", "content" : "hello1"}
-{"who" : "opponent", "time", "PM 5:01", "content" : "hello2"}
-{"who" : "opponent", "time", "PM 5:01", "content" : "hello3"}
+{"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
+{"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}
+{"who" : "opponent", "time" : "PM 5:00", "content" : "hello1"}

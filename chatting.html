@@ -7,7 +7,7 @@
     <script src="jscript.js"></script>
     <style>
         .main {
-            grid-template-rows: 32px 30px 1fr;
+            grid-template-rows: 32px 40px 1fr 50px;
         }
     </style>
 </head>
@@ -30,25 +30,22 @@
             <a href="" class="w_maximize"><i class="far fa-window-maximize fa-sm"></i></a>
             <a href="" class="w_close"><i class="fas fa-times fa-sm"></i></a>
         </div>
-
-        <div class="chatting">
-            <div class="chatHeader">
-                <a href="index.html"><i class="fas fa-chevron-left fa-lg"></i></a>
-                <span id="chatChatter">temp</span>
-            </div>
-            <div id="output">
-                <script> 
-                    chatLoad();
-                    var temp = JSON.parse(localStorage.getItem('chatter'));
-                    document.getElementById('chatChatter').innerText = temp.chatter_name;
-                </script>
-                <div>
-                    
-                </div>
-            </div>
-            <div id="chatinput">
-                <input type="text">
-            </div>
+        <div class="chatHeader">
+            <a href="index.html"><i class="fas fa-chevron-left fa-lg"></i></a>
+            <span id="chatChatter">temp</span>
+        </div>
+        <div class="output">
+            <script> 
+                chatLoad();
+                var temp = JSON.parse(localStorage.getItem('chatter'));
+                document.getElementById('chatChatter').innerText = temp.chatter_name;
+                document.write('<img src='+temp.chatter_img+'>');
+            </script>
+            
+        </div>
+        <div class="chatinput">
+            <input type="text">
+            <input type="button" value="전송">
         </div>
     </div>
 

@@ -64,6 +64,7 @@ html, body {
     padding: 0 0 0 20px;
     overflow-x: hidden;
     overflow-y: auto;
+
 }
 .items li {
     display: grid;
@@ -105,20 +106,30 @@ html, body {
     grid-area: g_text3;
     font-size: 11px;
 }
-.chatting {
-    width: 450px;
-}
-.chatting .chatHeader {
+.chatHeader {
     padding: 0 15px;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
 }
-.chatting .chatHeader #chatChatter {
+.chatHeader #chatChatter {
     margin: 0;
     position: absolute;
     left: 50%;
     font-weight: bold;
     font-size: 20px;
+}
+.output {
+    height: ;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.output img {
+    width: 60px;
+    height: 60px;
+    border-radius: 23px;
+}
+.chatinput {
+    background-color: #eee;
 }
 
 .temp {

@@ -44,7 +44,10 @@ function chatLoad() {
                 
                 lines.splice(0, 2);
                 for(var line of lines) {
-                    document.write("<p>"+line+"</p>");
+                    var temp = JSON.parse(line);
+                    alert(temp.who);
+                    document.write('<div class='+temp.who+'>'+line+'</div>');
+                    //document.write(line+"\n");
                 }
             }
         }
