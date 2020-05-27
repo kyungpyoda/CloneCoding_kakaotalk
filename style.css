@@ -121,11 +121,40 @@ html, body {
 .output {
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: #ddd;
 }
-.output img {
-    width: 60px;
-    height: 60px;
-    border-radius: 23px;
+.output .system {
+    text-align: center;
+    margin: 10px 0;
+}
+.output .opponent { 
+    display: grid;
+    grid-template-columns: 50px 250px 1fr ;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+        "c_img c_name c_time"
+        "c_img c_content c_time";
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.output .opponent > img {
+    grid-area: c_img;
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+}
+.output .opponent .c_name {
+    grid-area: c_name;
+    font-weight: bold;
+}
+.output .opponent .c_content {
+    grid-area: c_content;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.output .opponent .c_time {
+    grid-area: c_time;
 }
 .chatinput {
     background-color: #eee;

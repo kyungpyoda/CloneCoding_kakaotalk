@@ -39,26 +39,27 @@ function chatLoad() {
             if (rawfile.status === 200 || rawfile.status === 0) {
                 var allText = rawfile.responseText;
                 var lines = allText.split("\n");
-                localStorage.setItem('chatter', '{"chatter_name":"'+lines[0]+'", "chatter_img":"'+lines[1]+'"}');
-                var temp = JSON.parse(localStorage.getItem('chatter'));
-                document.getElementById('chatChatter').innerText = temp.chatter_name;
+                localStorage.setItem('chatter_name', lines[0]);
+                localStorage.setItem('chatter_img', lines[1]);
+                let chatter_name = localStorage.getItem('chatter_name');
+                let chatter_img = localStorage.getItem('chatter_img');
+                document.getElementById('chatChatter').innerText = chatter_name;
                 
                 lines.splice(0, 2);
                 var time = String(new Date());
                 var tdate = time.split(' ')[0] + ' ' + time.split(' ')[1]
                     + ' ' + time.split(' ')[2] + ' ' + time.split(' ')[3];
-                console.log(tdate);
-                
+                localStorage.setItem('today', tdate);
+
                 for(var line of lines) {
                     var temp = JSON.parse(line);
                     if(temp.who === 'system') {
-                        alert(temp.date);
-                        document.write('<div class="'+temp.date+'">'+temp.date+'</div>');
-
+                        //alert(temp.date);
+                        document.write('<p class="system '+temp.date+'">---- '+temp.date+' ----</p>');
+                        localStorage.setItem('today', temp.date);
                         continue;
                     }
-                    var tt = temp.who+' '+temp.time;
-                    document.write('<div class="'+tt+'">'+temp.content+'</div>');
+                    document.write('<div class="'+temp.who+' '+temp.time+'"><img src="'+chatter_img+'"><p class="c_name">'+chatter_name+'</p><p class="c_content">'+temp.content+'</p><p class="c_time">'+temp.time+'</p></div>');
                 }
                 var elem = document.querySelector('.output');
                 elem.scrollTop = elem.scrollHeight;
@@ -67,7 +68,4 @@ function chatLoad() {
         }
     };
     rawfile.send(null);
-}
-function dateParsing() {
-
 }
