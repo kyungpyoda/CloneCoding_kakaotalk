@@ -39,16 +39,22 @@ function chatLoad() {
             if (rawfile.status === 200 || rawfile.status === 0) {
                 var allText = rawfile.responseText;
                 var lines = allText.split("\n");
-                //alert(lines[1]);
-                localStorage.setItem('chatter', '{"chatter_name":"'+lines[0]+'","chatter_img":"'+lines[1]+'"}');
+                localStorage.setItem('chatter', '{"chatter_name":"'+lines[0]+'", "chatter_img":"'+lines[1]+'"}');
                 var temp = JSON.parse(localStorage.getItem('chatter'));
                 document.getElementById('chatChatter').innerText = temp.chatter_name;
                 
                 lines.splice(0, 2);
+                var time = String(new Date());
+                var tdate = time.split(' ')[0] + ' ' + time.split(' ')[1]
+                    + ' ' + time.split(' ')[2] + ' ' + time.split(' ')[3];
+                console.log(tdate);
+                
                 for(var line of lines) {
                     var temp = JSON.parse(line);
                     if(temp.who === 'system') {
-                        alert(line);
+                        alert(temp.date);
+                        document.write('<div class="'+temp.date+'">'+temp.date+'</div>');
+
                         continue;
                     }
                     var tt = temp.who+' '+temp.time;
@@ -57,7 +63,11 @@ function chatLoad() {
                 var elem = document.querySelector('.output');
                 elem.scrollTop = elem.scrollHeight;
             }
+            
         }
     };
     rawfile.send(null);
+}
+function dateParsing() {
+
 }
